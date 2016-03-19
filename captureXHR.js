@@ -5,7 +5,7 @@ function captureXHR(receive_url){
     var a = document.createElement('a');
     a.href = url;
     url = escape(a.href);
-    this.sucks = {method:method,url:url,async:async,user:user,password:password};
+    this.sucks = {method,url,async,user,password};
     this._open.apply(this,arguments);
   };
   XMLHttpRequest.prototype.send = function(data){
